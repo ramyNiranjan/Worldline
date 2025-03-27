@@ -1,54 +1,84 @@
-# React + TypeScript + Vite
+# Project Name
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A brief description of your project—what it does and its key features.
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Overview](#overview)
+- [Technologies Used](#technologies-used)
+- [Getting Started](#getting-started)
+- [Installation](#installation)
+- [Running the Project](#running-the-project)
 
-## Expanding the ESLint configuration
+## Overview
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+This project is built using modern web development tools to create a fast and responsive user interface. It leverages **React** for building UI components, **Vite** for a lightning-fast development environment, and **TypeScript** for type safety. The styling is managed with **Tailwind CSS** and **shadcn/ui** components to ensure a sleek and customizable design. Data fetching is powered by **Axios** and **TanStack Query** for efficient and flexible API handling, and **React Router** is used for managing routes within the app.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Technologies Used
+
+- **React**: A JavaScript library for building user interfaces.
+- **Vite**: A fast build tool and development server.
+- **TypeScript**: A statically typed superset of JavaScript.
+- **Tailwind CSS**: A utility-first CSS framework for fast styling.
+  - [Tailwind CSS Documentation](https://tailwindcss.com/)
+- **shadcn/ui**: A set of customizable React components built with Tailwind CSS.
+  - [shadcn/ui Documentation](https://ui.shadcn.com/)
+- **TanStack Query (React Query)**: A powerful data-fetching library for managing server-state in React.
+  - [TanStack Query Documentation](https://tanstack.com/query/latest)
+- **Axios**: Promise-based HTTP client for making API requests.
+- **React Router**: A library for routing and navigation in React applications.
+  - [React Router Documentation](https://reactrouter.com/)
+
+## Getting Started
+
+### Prerequisites
+
+Before you begin, make sure you have the following installed:
+
+- [Node.js](https://nodejs.org/) (version 16 or higher recommended)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/ramyNiranjan/Worldline.git
+   ```
+
+2. Navigate to the project directory:
+   ```bash
+   cd Worldline
+   ```
+3. Install the project dependencies:
+
+   ```bash
+   npm install
+
+   ```
+
+   or
+
+   ```bash
+   yarn install
+   ```
+
+````
+
+### Running the Project
+
+1. Run the development server:
+
+  ```bash
+  npm run dev
+
+````
+
+or
+
+```bash
+yarn dev
+
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+2. Open your browser and go to http://localhost:5173. The application will automatically reload if you make changes to the code.
