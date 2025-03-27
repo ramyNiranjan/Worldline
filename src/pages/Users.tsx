@@ -1,13 +1,13 @@
 import Headline from '@/components/shared/Headline';
-import UserList from '@/components/user/UserList';
+import UserLists from '@/components/user/UserLists';
 
 type UsersProps = object;
 
 function Users({}: UsersProps) {
   return (
-    <div className="container mx-auto">
+    <div className="">
       <Headline title="Users" />
-      <UserList />
+      <UserLists />
     </div>
   );
 }

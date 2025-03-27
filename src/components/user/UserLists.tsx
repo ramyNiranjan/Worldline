@@ -4,7 +4,7 @@ import UserCard from './UserCard';
 
 type Props = object;
 
-function UserList({}: Props) {
+function UserLists({}: Props) {
   const { data: users, isLoading, isError } = useUsers();
 
   // need to handle loading and error states better
@@ -20,4 +20,4 @@ function UserList({}: Props) {
   );
 }
 
-export default UserList;
+export default UserLists;

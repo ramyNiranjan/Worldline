@@ -1,8 +1,8 @@
 import { Post } from '@/components-types';
 import { useUserPosts } from '@/hooks/useUserPosts';
 import { useParams } from 'react-router-dom';
-import Headline from '../shared/Headline';
-import PostCard from '../shared/PostCard';
+import DisplayCard from '../components/shared/DisplayCard';
+import Headline from '../components/shared/Headline';
 
 type Props = object;
 
@@ -17,11 +17,11 @@ function UserPosts({}: Props) {
   if (isError) return <div>Error fetching posts</div>;
 
   return (
-    <div>
+    <div className="">
       <Headline title={`Posts by User ${id}`} />
       <div className="grid grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-6">
         {userPosts?.data.map((post: Post) => (
-          <PostCard key={post.id} post={post} />
+          <DisplayCard key={post.id} post={post} />
         ))}
       </div>
     </div>

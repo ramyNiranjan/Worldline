@@ -1,8 +1,8 @@
 import { useComments } from '@/hooks/useComments';
 import { usePost } from '@/hooks/usePost';
 import { useParams } from 'react-router-dom';
-import Headline from '../shared/Headline';
-import PostCommentCard from './PostCommentCard';
+import PostCommentCard from '../components/post/PostCommentCard';
+import Headline from '../components/shared/Headline';
 
 type Props = object;
 
@@ -16,7 +16,7 @@ function PostDetail({}: Props) {
   if (postError || commentsError) return <div>Error loading data</div>;
 
   return (
-    <div>
+    <div className="">
       <Headline title="Post Detail" />
       <PostCommentCard post={post?.data} comments={comments?.data} />
     </div>

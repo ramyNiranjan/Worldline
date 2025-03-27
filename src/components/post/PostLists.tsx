@@ -3,8 +3,8 @@ import { useDeletePost } from '@/hooks/useDeletePost';
 import { usePosts } from '@/hooks/usePosts';
 import { useState } from 'react';
 import { toast } from 'sonner';
+import DisplayCard from '../shared/DisplayCard';
 import PaginationComponent from '../shared/PaginationComponent';
-import PostCard from '../shared/PostCard';
 
 type Props = object;
 
@@ -36,7 +36,7 @@ function PostLists({}: Props) {
       <div className="grid grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-6 mb-6">
         {data?.data.map((post: Post) => (
           <div key={post.id}>
-            <PostCard post={post} linkText="See Comments" link={`/post/${post.id}`} onDelete={() => handleDelete(post.id)} useAsPostForm />
+            <DisplayCard post={post} linkText="See Comments" link={`/post/${post.id}`} onDelete={() => handleDelete(post.id)} useAsPostForm />
           </div>
         ))}
       </div>

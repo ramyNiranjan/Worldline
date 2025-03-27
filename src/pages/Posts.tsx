@@ -5,7 +5,7 @@ type PostsProps = object;
 
 function Posts({}: PostsProps) {
   return (
-    <div className="container mx-auto">
+    <div className="">
       <Headline title="Posts" />
       <PostLists />
     </div>

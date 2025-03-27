@@ -10,8 +10,8 @@ function PaginationComponent({ currentPage, totalPages, onPageChange }: Props) {
   const startPage = 1;
 
   return (
-    <Pagination>
-      <PaginationContent>
+    <Pagination className="">
+      <PaginationContent className="flex flex-wrap justify-center space-x-2 md:space-x-4 my-4">
         <PaginationItem>
           <PaginationPrevious
             className={`cursor-pointer ${currentPage === 1 ? 'opacity-50 cursor-not-allowed' : ''}`}
@@ -28,8 +28,8 @@ function PaginationComponent({ currentPage, totalPages, onPageChange }: Props) {
         {Array.from({ length: totalPages }, (_, index) => {
           const pageNum = startPage + index;
           return (
-            <PaginationItem key={pageNum}>
-              <PaginationLink isActive={currentPage === pageNum} onClick={() => onPageChange(pageNum)}>
+            <PaginationItem key={pageNum} className="mx-1">
+              <PaginationLink isActive={currentPage === pageNum} onClick={() => onPageChange(pageNum)} className="">
                 {pageNum}
               </PaginationLink>
             </PaginationItem>

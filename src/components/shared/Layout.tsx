@@ -2,7 +2,7 @@ import { Outlet, useNavigate } from 'react-router-dom';
 import PostForm from '../post/PostForm';
 import { Button } from '../ui/button';
 
-type Props = {};
+type Props = object;
 
 function Layout({}: Props) {
   const navigate = useNavigate();

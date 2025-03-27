@@ -25,7 +25,7 @@ function PostCommentCard({ post, comments }: PostCommentCardProps) {
         {post && (
           <>
             <CardTitle>{`${post.id}. ${post.title}`}</CardTitle>
-            <CardDescription className="max-w-2/4">{post.body}</CardDescription>
+            <CardDescription className="w-full sm:w-3/4 md:w-2/4">{post.body}</CardDescription>
           </>
         )}
       </CardHeader>
@@ -33,7 +33,7 @@ function PostCommentCard({ post, comments }: PostCommentCardProps) {
         <>
           <h4 className="px-6 underline">Post comments</h4>
           {comments.map((comment) => (
-            <CardContent className="w-2/3" key={comment.id}>
+            <CardContent className="w-full sm:w-3/4 md:w-2/4" key={comment.id}>
               <CardDescription className="text-gray-950">Name: {comment.name}</CardDescription>
               <CardDescription className="text-gray-900">Email: {comment.email}</CardDescription>
               <CardDescription className="">
