@@ -1,4 +1,4 @@
-# Project Name
+# Worldline
 
 A brief description of your project—what it does and its key features.
 
@@ -63,16 +63,14 @@ Before you begin, make sure you have the following installed:
    yarn install
    ```
 
-````
-
 ### Running the Project
 
 1. Run the development server:
 
-  ```bash
-  npm run dev
+```bash
+npm run dev
 
-````
+```
 
 or
 
